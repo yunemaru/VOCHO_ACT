@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vocho de color</title>
-    <center><h1>ESCOGE UN VOCHO WEON</h1></center>
+    <title>Selección de Vocho</title>
+    <center><h1>ESCOGE UN VOCHO, AMIGO</h1></center>
     <style>
         .Texto{
-            font: small-caps 100%/200% serif;;
+            font: small-caps 100%/200% serif;
         }
         .container{
             text-align: center;
-
         }
         .opciones{
             background-color: rgb(238, 222, 2);
@@ -21,27 +20,28 @@
         .color-opcion{
             width: 50px;
             height: 50px;
-            background-color: aqua;
             border-radius: 50%;
             display: inline-block;
             cursor: pointer;
         }
-
     </style>
    
 </head>
 <body class="Texto">
-    <fieldset class="container">
+    <form class="container">
         <img id="cambiar-bocho" src="bocho_rojo.jpg" alt="">
-        <input type="radio" name="bocho" value="bocho_azul" class="color-opcion"  style="background-color: red;" onclick="cambiarColorA('rojo')"> Vocho Rojo
-        <input type="radio" name="bocho" value="bocho_azul" class="color-opcion" style="background-color: blue;" onclick="cambiarColorA('azul')"> Vocho Azul
-        <input type="radio" name="bocho" value="bocho_azul" class="color-opcion" style="background-color: yellow (11, 135, 184);" onclick="cambiarColorA('amarillo')"> Vocho Amarillo
-        <input type="radio" name="bocho" value="bocho_azul" class="color-opcion" style="background-color: white" onclick="cambiarColorA('blanco')"> Vocho Blanco
-    </fieldset>
+        <h2>Vochos</h2>
+        <select class="Texto" onchange="cambiarColorA(this.value)"> <!--onchange dispara el evento cuando se cambia la selección-->
+            <!-- this.value llama a la función para cambiar el color  -->
+            <option value="rojo" style="background-color: red;">Vocho Rojo </option>
+            <option value="azul" style="background-color: blue;">Vocho Azul</option>
+            <option value="amarillo" style="background-color: yellow;">Vocho Amarillo</option>
+            <option value="blanco" style="background-color: white;">Vocho Blanco</option>
+        </select>
+    </form>
     <script>
         function cambiarColorA(color){
-            document.getElementById("cambiar-bocho").src = "bocho_" +color+ ".jpg"
-
+            document.getElementById("cambiar-bocho").src = "bocho_" + color + ".jpg";
         }
     </script> 
 </body>
