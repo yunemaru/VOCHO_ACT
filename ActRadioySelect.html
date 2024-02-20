@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocho de color</title>
+    <center><h1>ESCOGE UN VOCHO WEON</h1></center>
+    <style>
+        .Texto{
+            font: small-caps 100%/200% serif;;
+        }
+        .container{
+            text-align: center;
+
+        }
+        .opciones{
+            background-color: rgb(238, 222, 2);
+            width: 500px;
+            margin: 0 auto;
+        }
+        .color-opcion{
+            width: 50px;
+            height: 50px;
+            background-color: aqua;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+    </style>
+   
+</head>
+<body class="Texto">
+    <fieldset class="container">
+        <img id="cambiar-bocho" src="bocho_rojo.jpg" alt="">
+        <input type="radio" name="bocho" value="bocho_azul" class="color-opcion"  style="background-color: red;" onclick="cambiarColorA('rojo')"> Vocho Rojo
+        <input type="radio" name="bocho" value="bocho_azul" class="color-opcion" style="background-color: blue;" onclick="cambiarColorA('azul')"> Vocho Azul
+        <input type="radio" name="bocho" value="bocho_azul" class="color-opcion" style="background-color: yellow (11, 135, 184);" onclick="cambiarColorA('amarillo')"> Vocho Amarillo
+        <input type="radio" name="bocho" value="bocho_azul" class="color-opcion" style="background-color: white" onclick="cambiarColorA('blanco')"> Vocho Blanco
+    </fieldset>
+    <script>
+        function cambiarColorA(color){
+            document.getElementById("cambiar-bocho").src = "bocho_" +color+ ".jpg"
+
+        }
+    </script> 
+</body>
+</html>
